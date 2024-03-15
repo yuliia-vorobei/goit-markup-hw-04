@@ -84,6 +84,23 @@ img {
   display: flex;
   gap: 40px;
 }
+
+.current {
+  position: relative;
+  color: #404bbf;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  border-radius: 2px;
+  height: 4px;
+  background-color: #404bbf;
+  width: 100%;
+}
+
 .nav-link {
   font-weight: 500;
   font-size: 16px;
@@ -92,6 +109,9 @@ img {
   color: #2e2f42;
   padding: 24px 0;
   display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -114,6 +134,9 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -129,8 +152,17 @@ section {
 .hero {
   background-color: #2e2f42;
   padding: 188px 0;
+  background: rgba(46, 47, 66, 0.7);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-background.jpg);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-
 .hero-title {
   font-size: 56px;
   line-height: 1.07;
@@ -157,6 +189,9 @@ section {
   margin: 0 auto;
   padding: 16px 32px;
   min-width: 169px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -173,6 +208,22 @@ section {
   width: calc((100% - 3 * 24px) / 4);
 }
 
+.feautures-icons-wrap {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  max-width: 264px;
+  background: #f4f4fd;
+}
+
+.feautures-icons {
+  width: 64px;
+  height: 64px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
 .features-title {
   font-weight: 500;
   font-size: 20px;
@@ -180,6 +231,7 @@ section {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .features-text {
@@ -240,6 +292,33 @@ section {
   color: #434455;
 }
 
+.team-icons-wrap {
+  display: flex;
+  gap: 24px;
+  padding-top: 8px;
+  justify-content: center;
+}
+
+.team-icons-background {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-icons-background:hover {
+  background-color: #404bbf;
+}
+
+.team-icons {
+  fill: #e7e9fc;
+  margin: auto;
+}
+
 .portfolio-title {
   font-size: 36px;
   line-height: 1.11;
@@ -258,6 +337,32 @@ section {
   flex-wrap: wrap;
   gap: 24px;
   row-gap: 48px;
+}
+
+.portfolio-item:hover .portfolio-text-cover {
+  transform: translateY(0);
+}
+
+.portfolio-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-text-cover {
+  position: absolute;
+  top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  background-color: #4d5ae5;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-container {
@@ -289,6 +394,9 @@ section {
   padding-bottom: 100px;
 }
 
+.wrap {
+  display: flex;
+}
 .logo-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -313,4 +421,45 @@ section {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
+}
+
+.footer-icons-wrap {
+  padding-left: 120px;
+}
+
+.footer-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.footer-icons-list {
+  display: flex;
+  gap: 16px;
+  max-width: 208px;
+}
+
+.footer-icons-item {
+  width: calc((100% - 3 * 16px) / 4);
+}
+
+.footer-icons-background {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icons-background:hover {
+  background-color: #404bbf;
+}
+.footer-icons {
+  fill: #e7e9fc;
+  margin: auto;
 }
