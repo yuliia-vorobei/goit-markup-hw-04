@@ -223,15 +223,6 @@ section {
   margin-bottom: 8px;
 }
 
-.feautures-icons {
-  width: 64px;
-  height: 64px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-right: 100px;
-  margin-left: 100px;
-}
-
 .features-title {
   font-weight: 500;
   font-size: 20px;
@@ -239,7 +230,6 @@ section {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-  margin-top: 8px;
 }
 
 .features-text {
@@ -299,6 +289,7 @@ section {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+  margin-bottom: 8px;
 }
 
 .team-icons-list {
@@ -450,10 +441,6 @@ section {
   max-width: 264px;
 }
 
-.footer-icons-wrap {
-  padding-left: 120px;
-}
-
 .footer-subtitle {
   font-weight: 500;
   font-size: 16px;
@@ -491,5 +478,4 @@ section {
 }
 .footer-icons {
   fill: #f4f4fd;
-  margin: auto;
 }
